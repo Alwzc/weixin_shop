@@ -1,0 +1,4 @@
+<include src="/commons/extension/extension"></include>
+<view class="main">
+    <text>{{content}}</text>
+</view>

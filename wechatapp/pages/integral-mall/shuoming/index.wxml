@@ -1,0 +1,4 @@
+<view style="padding:36rpx 24rpx 0rpx 24rpx;" wx:for="{{integral_shuoming}}" wx:for-item="title">
+    <view class="title">{{title.title}}</view>
+    <text style="color:#353535;">{{title.content}}</text>
+</view>

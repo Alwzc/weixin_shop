@@ -1,0 +1,44 @@
+<view class="quick-icon" direction="all" wx:if="{{quick_icon}}">
+    <view bindtap="quickNavigation" class="flex-col flex-y-center flex-x-center quick-bg">
+        <text class="quick-text">快捷</text>
+        <text class="quick-text">导航</text>
+    </view>
+</view>
+<view class="act-modal" wx:else>
+    <view bindtap="closeActModal" class="act-modal-bg"></view>
+    <view class="act-modal-pic flex-y-center flex-x-center">
+        <view class="quick-icon" direction="all">
+            <view style="position:relative;">
+                <view animation="{{animationPlus}}" class="we">
+                    <navigator hoverClass="none" openType="reLaunch" url="/pages/index/index">
+                        <image class="quick-dial" mode="aspectFit" src="/images/quick-home.png"></image>
+                    </navigator>
+                </view>
+                <view animation="{{animationPic}}" bindtap="to_dial" class="quick-dial we" style="background-image:url('{{store.dial_pic}}'); background-size: 100rpx 100rpx;" wx:if="{{store.dial==1&&store.dial_pic}}"></view>
+                <navigator hoverClass="none" openType="navigate" url="/pages/web/web?url={{store.option.web_service_url}}" wx:if="{{store.option.web_service}}">
+                    <view animation="{{animationcollect}}" class="we">
+                        <image class="quick-dial" src="{{store.option.web_service}}"></image>
+                    </view>
+                </navigator>
+                <button openType="contact" sessionFrom="{{__user_info.nickname}}|" style="border:0rpx solid red;padding:0px;display:inline;background-color:transparent;" wx:if="{{store.show_customer_service&&store.show_customer_service==1&&store.service}}">
+                    <view animation="{{animationTranspond}}" style="display:inline-block;position:absolute;top:0;bottom:0">
+                        <image class="quick-dial" src="{{store.service}}"></image>
+                    </view>
+                </button>
+                <block wx:if="{{store.option.wxapp.pic_url}}">
+                    <navigator appId="{{store.option.wxapp.appid}}" data-open_type="wxapp" hoverClass="none" openType="navigate" path="{{store.option.wxapp.path}}" target="miniProgram">
+                        <view animation="{{animationInput}}" class="we">
+                            <image class="quick-dial" src="{{store.option.wxapp.pic_url}}"></image>
+                        </view>
+                    </navigator>
+                    <view animation="{{animationInput}}" class="we" data-app-id="{{store.option.wxapp.appid}}" data-path="{{store.option.wxapp.path}}" onTap="openWxapp">
+                        <image class="quick-dial" src="{{store.option.wxapp.pic_url}}"></image>
+                    </view>
+                </block>
+                <view bindtap="quickNavigation" class="flex-col flex-y-center flex-x-center quick-bg" style="z-index:20;position:relative;bottom:0">
+                    <text class="quick-text">收起</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
