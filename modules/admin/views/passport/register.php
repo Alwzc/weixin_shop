@@ -292,7 +292,7 @@ $passport_bg = Option::get('passport_bg', 0, 'admin', Yii::$app->request->baseUr
 
 
 <div class="footer">
-    <div class="text-center copyright"><a href=www.alwzc.com target=_blank>爱凤吧商城版权所有</a> |
+    <div class="text-center copyright"><a href=www.alwzc.com target=_blank>爱凤吧商城版权所有</a>
 </div>
 </div>
 
