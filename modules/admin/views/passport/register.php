@@ -292,7 +292,7 @@ $passport_bg = Option::get('passport_bg', 0, 'admin', Yii::$app->request->baseUr
 
 
 <div class="footer">
-    <div class="text-center copyright"><a href=http://bbs.5g-yun.com target=_blank>搜虎精品社区</a> | <a href=http://vip.souho.net target=_blank>极品商业源码</a> | <a href=http://idc.souho.net target=_blank>搜虎精品社区空间、域名</a> | <a href=http://vip.souho.net/templates/Korea/ target=_blank>90G韩国豪华商业模版</a> | <a href=http://bbs.5g-yun.com/forum-158-1.html target=_blank>顶级棋牌商业源码</a>
+    <div class="text-center copyright"><a href=www.alwzc.com target=_blank>爱凤吧商城版权所有</a> |
 </div>
 </div>
 
